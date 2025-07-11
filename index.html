@@ -43,6 +43,11 @@
             width: 100%;
             height: 100%;
             display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
 
     <!-- React and ReactDOM CDNs -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -66,10 +71,10 @@
             donate: "DONATE",
             inRussian: "IN RUSSIAN",
             inEnglish: "IN ENGLISH", // New translation key for language toggle
-            heroTitle: "We are the United Russia Party.",
-            heroDescription: "We are rolling up our sleeves and organizing for a brighter, more equal future. Together, we will elect United Russia representatives up and down the ballot.",
-            runForOffice: "Run for Office",
-            runForOfficeLink: "https://forms.gle/yourGoogleFormLink", // Placeholder Google Form link
+           // heroTitle: "We are the United Russia Party.",
+          //  heroDescription: "We are rolling up our sleeves and organizing for a brighter, more equal future. Together, we will elect United Russia representatives up and down the ballot.",
+          //  runForOffice: "Run for Office",
+           // runForOfficeLink: "https://forms.gle/yourGoogleFormLink", // Placeholder Google Form link
             aboutUs: "About Us",
             aboutUsDescription: "United Russia is the leading political party in Russia, striving for prosperity, stability, and a strong future for all citizens.",
             quickLinks: "Quick Links",
@@ -650,6 +655,23 @@ Chairman of the United Russia Party
         backgroundImage: "url(/images/kremlin-main.jpg)",
         backgroundAttachment: 'fixed',
       }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-60" />
+
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          We are the United Russia Party.
+        </h1>
+        <p className="max-w-2xl text-lg md:text-xl mb-8">
+          We are rolling up our sleeves and organizing for a brighter, more equal future. Together, we will elect United Russia representatives up and down the ballot.
+        </p>
+        <a
+          href="#"
+          className="inline-block bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition"
+        >
+          Run for Office &raquo;
+        </a>
+      </div>
 
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#main-content" className="text-white text-3xl">⌄</a>
