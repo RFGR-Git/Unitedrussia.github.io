@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100%; /* Or a defined height if not full screen */
+            height: 100%;
         }
         #map-svg-container {
             flex-grow: 1; /* Allows the map to take available vertical space */
@@ -46,7 +46,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
 
     <!-- React and ReactDOM CDNs -->
@@ -60,6 +60,7 @@
 
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
+        const { createRoot } = ReactDOM;
 
         // Translations object for managing text content in different languages
         const translations = {
@@ -250,100 +251,18 @@ Our priorities are rooted in defending social stability:
 - Counterterrorism support in the North Caucasus
 
 NATIONAL VALUES
-We promote Russian language, history, and traditions. United Russia defends Orthodox values, national identity, and patriotic education as pillars of a united Russia.`, // New content for What We Do page
+We promote Russian language, history, and traditions. United Russia defends Orthodox values, national identity, and patriotic education as pillars of a united Russia.`,
 
             // About The United Russia Party Page Content
             ourPartyTitle: "Our Party", // New title for the page
             ourPartyDescription: "United Russia is the leading political party in the Russian Federation, committed to stability, prosperity, and the well-being of its citizens. Our journey began with a clear vision for a strong and unified Russia. The United Russia party was formed on December 1, 2001, through the merger of the 'Unity' Party, the 'Fatherland' movement, and the 'All-Russia' movement. Since its inception, it has grown to become the largest political force in Russia, consistently securing a stable majority in the State Duma and providing crucial support for national leadership. United Russia's ideology is broadly described as centrist, centre-right, or right-wing, emphasizing Russian conservatism, statism, cultural nationalism, stability, and patriotism. We firmly support the policies aimed at strengthening the presidential regime as a guarantee of political stability. Our key goals include enhancing national defense capabilities, establishing effective social security mechanisms, implementing administrative reforms to boost public trust, deepening reforms in the economy and justice sectors, and achieving the grand objective of doubling the gross domestic product. We are committed to fostering a unique, distinctive civilization—a multinational and multi-faith nation that remains united in its diversity.",
 
-            // Party Charter Page Content
-            partyCharterContent: `
-UNITED RUSSIA PARTY BYLAWS
-Table of Contents
-Preamble
-ARTICLE I: NAME AND PURPOSE
-Section 1. Name
-Section 2. Purpose
-ARTICLE II: MEMBERSHIP
-Section 1. Composition of Membership
-Section 2. Key Positions
-Section 3. Membership Eligibility
-ARTICLE III: OFFICERS AND DUTIES
-Section 1. Officers
-Section 2. Chairman
-Section 3. Treasurer
-ARTICLE IV: MEETINGS AND VOTING
-Section 1. Meetings
-Section 2. Quorum
-Section 3. Voting Procedures
-ARTICLE V: PLATFORM AND POLICIES
-ARTICLE VI: AMENDMENTS
-Section 1. Amendments
-ARTICLE VII: MONITORING AND ENFORCEMENT
-Section 1. Enforcement of Principles
-Section 2. Oath of Loyalty
-
-Preamble
-The United Russia Party (hereinafter referred to as “the Party”) is committed to promoting the values of unity, national pride, and the development of a stable and prosperous Russian Federation. These Bylaws serve as the foundation of the Party’s structure, operations, and principles, guiding all its members and ensuring adherence to the constitutional values of the Russian Federation.
-
-ARTICLE I: NAME AND PURPOSE
-Section 1. Name
-The name of this organization shall be United Russia.
-Section 2. Purpose
-The mission of United Russia is to ensure the political stability, economic prosperity, and security of the Russian Federation. We stand for national unity, the defense of Russian sovereignty, and the promotion of democratic principles in accordance with the Constitution of the Russian Federation. The Party’s efforts will focus on achieving these goals through strategic policy development, the election of capable leaders, and ensuring the integrity of the electoral process.
-
-ARTICLE II: MEMBERSHIP
-Section 1. Composition of Membership
-Membership shall consist of two representatives from each region of the Russian Federation. These individuals will represent the Party within their respective regions, serve on committees, and contribute to the development of the Party’s strategy at the national level.
-Section 2. Key Positions
-Each region’s representatives serve as the Board of the National Committee. The entire Party membership will elect a Chairman, who will then appoint officers such as the Secretary, Co-Chair, Treasurer, and others as needed. These officers will manage the day-to-day operations of the Party.
-Section 3. Membership Eligibility
-To be eligible for membership, individuals must demonstrate adherence to the values and principles outlined in the Party’s platform. Members must actively support the Party’s mission and be willing to work for the promotion of United Russia’s goals.
-
-
-ARTICLE III: OFFICERS AND DUTIES
-Section 1. Officers
-The Party shall elect the following officers:
-Chairman
-Co-Chair
-Treasurer
-Additional officers may be appointed as needed, including Legal Counsel, Fundraising Chair, or others in specialized roles.
-Section 2. Chairman
-The Chairman is responsible for overseeing the operations of the Party. The Chairman will ensure alignment with the Party's principles, manage national election strategies, and serve as the public face of United Russia.
-Section 3. Treasurer
-The Treasurer will manage the financial affairs of the Party, ensuring compliance with Russian federal laws on political contributions and funding. The Treasurer is responsible for maintaining transparency in the Party’s financial dealings.
-
-
-ARTICLE IV: MEETINGS AND VOTING
-Section 1. Meetings
-The Party shall hold at least one national meeting per year. Additional meetings may be called by the Chairman or requested by the membership. These meetings shall be open to all members, but only the Board of the National Committee and elected officers may vote on proposals or resolutions.
-Section 2. Quorum
-A quorum for any official meeting of the Party shall consist of a majority of the voting members present. If a quorum is not reached, discussions may continue, but no binding votes may be held.
-Section 3. Voting Procedures
-Votes shall be conducted in accordance with the Party’s guidelines. Proposals that require approval by the full Party membership will be voted on during the National Congress.
-
-
-
-ARTICLE V: PLATFORM AND POLICIES
-United Russia supports policies that promote:
-National Unity and stability in the Russian Federation.
-Economic growth and development through market reforms.
-Strong national defense and the protection of Russia’s sovereignty.
-Social policies that support traditional family values and the welfare of all Russian citizens.
-
-ARTICLE VI: AMENDMENTS
-Section 1. Amendments
-Amendments to these Bylaws may be proposed by any member of the Party. To be adopted, an amendment must receive approval by a two-thirds majority of the Board of the National Committee and be ratified by the full Party membership at the National Congress.
-
-ARTICLE VII: MONITORING AND ENFORCEMENT
-Section 1. Enforcement of Principles
-All members of the Party must adhere to the Party’s values and principles. Any member who violates these principles may be subject to disciplinary action, including removal from office or expulsion from the Party.
-Section 2. Oath of Loyalty
-All new members and officers must take an Oath of Loyalty, affirming their commitment to uphold the principles of the Party and support its mission.
-SIGNED,
-Vladimir Putin
-Chairman of the United Russia Party
-`,
+            // Party Charter Page Content - ONLY THE TITLE IS KEPT HERE
+            partyCharterPageTitle: "United Russia Party Bylaws",
+            backToTop: "Back to Top",
+            previous: "Previous",
+            next: "Next",
+            section: "Section",
             // Removed Who We Serve Page Content
           },
           ru: { // Added Russian translations
@@ -503,6 +422,70 @@ Chairman of the United Russia Party
           }
         };
 
+        // Party Charter content structured as a JavaScript object for easy rendering and navigation
+        // This object now holds the full charter content, replacing the string in translations.en.partyCharterContent
+        const partyCharterContent = {
+            preamble: {
+                title: "Preamble",
+                text: "The United Russia Party (hereinafter referred to as “the Party”) is committed to promoting the values of unity, national pride, and the development of a stable and prosperous Russian Federation. These Bylaws serve as the foundation of the Party’s structure, operations, and principles, guiding all its members and ensuring adherence to the constitutional values of the Russian Federation."
+            },
+            article1: {
+                title: "ARTICLE I: NAME AND PURPOSE",
+                sections: [
+                    { id: "article1-section1", title: "Section 1. Name", text: "The name of this organization shall be United Russia." },
+                    { id: "article1-section2", title: "Section 2. Purpose", text: "The mission of United Russia is to ensure the political stability, economic prosperity, and security of the Russian Federation. We stand for national unity, the defense of Russian sovereignty, and the promotion of democratic principles in accordance with the Constitution of the Russian Federation. The Party’s efforts will focus on achieving these goals through strategic policy development, the election of capable leaders, and ensuring the integrity of the electoral process." }
+                ]
+            },
+            article2: {
+                title: "ARTICLE II: MEMBERSHIP",
+                sections: [
+                    { id: "article2-section1", title: "Section 1. Composition of Membership", text: "Membership shall consist of two representatives from each region of the Russian Federation. These individuals will represent the Party within their respective regions, serve on committees, and contribute to the development of the Party’s strategy at the national level." },
+                    { id: "article2-section2", title: "Section 2. Key Positions", text: "Each region’s representatives serve as the Board of the National Committee. The entire Party membership will elect a Chairman, who will then appoint officers such as the Secretary, Co-Chair, Treasurer, and others as needed. These officers will manage the day-to-day operations of the Party." },
+                    { id: "article2-section3", title: "Section 3. Membership Eligibility", text: "To be eligible for membership, individuals must demonstrate adherence to the values and principles outlined in the Party’s platform. Members must actively support the Party’s mission and be willing to work for the promotion of United Russia’s goals." }
+                ]
+            },
+            article3: {
+                title: "ARTICLE III: OFFICERS AND DUTIES",
+                sections: [
+                    { id: "article3-section1", title: "Section 1. Officers", text: "The Party shall elect the following officers:\nChairman\nCo-Chair\nTreasurer\nAdditional officers may be appointed as needed, including Legal Counsel, Fundraising Chair, or others in specialized roles." },
+                    { id: "article3-section2", title: "Section 2. Chairman", text: "The Chairman is responsible for overseeing the operations of the Party. The Chairman will ensure alignment with the Party's principles, manage national election strategies, and serve as the public face of United Russia." },
+                    { id: "article3-section3", title: "Section 3. Treasurer", text: "The Treasurer will manage the financial affairs of the Party, ensuring compliance with Russian federal laws on political contributions and funding. The Treasurer is responsible for maintaining transparency in the Party’s financial dealings." }
+                ]
+            },
+            article4: {
+                title: "ARTICLE IV: MEETINGS AND VOTING",
+                sections: [
+                    { id: "article4-section1", title: "Section 1. Meetings", text: "The Party shall hold at least one national meeting per year. Additional meetings may be called by the Chairman or requested by the membership. These meetings shall be open to all members, but only the Board of the National Committee and elected officers may vote on proposals or resolutions." },
+                    { id: "article4-section2", title: "Section 2. Quorum", text: "A quorum for any official meeting of the Party shall consist of a majority of the voting members present. If a quorum is not reached, discussions may continue, but no binding votes may be held." },
+                    { id: "article4-section3", title: "Section 3. Voting Procedures", text: "Votes shall be conducted in accordance with the Party’s guidelines. Proposals that require approval by the full Party membership will be voted on during the National Congress." }
+                ]
+            },
+            article5: {
+                title: "ARTICLE V: PLATFORM AND POLICIES",
+                sections: [
+                    { id: "article5-section1", title: "Article V Content", text: "United Russia supports policies that promote:\nNational Unity and stability in the Russian Federation.\nEconomic growth and development through market reforms.\nStrong national defense and the protection of Russia’s sovereignty.\nSocial policies that support traditional family values and the welfare of all Russian citizens." }
+                ]
+            },
+            article6: {
+                title: "ARTICLE VI: AMENDMENTS",
+                sections: [
+                    { id: "article6-section1", title: "Section 1. Amendments", text: "Amendments to these Bylaws may be proposed by any member of the Party. To be adopted, an amendment must receive approval by a two-thirds majority of the Board of the National Committee and be ratified by the full Party membership at the National Congress." }
+                ]
+            },
+            article7: {
+                title: "ARTICLE VII: MONITORING AND ENFORCEMENT",
+                sections: [
+                    { id: "article7-section1", title: "Section 1. Enforcement of Principles", text: "All members of the Party must adhere to the Party’s values and principles. Any member who violates these principles may be subject to disciplinary action, including removal from office or expulsion from the Party." },
+                    { id: "article7-section2", title: "Section 2. Oath of Loyalty", text: "All new members and officers must take an Oath of Loyalty, affirming their commitment to uphold the principles of the Party and support its mission." }
+                ]
+            },
+            signature: {
+                title: "Signature",
+                text: "SIGNED,\nVladimir Putin\nChairman of the United Russia Party"
+            }
+        };
+
+
         // Data for projects (for carousel and grid)
         const projectsData = [
           { id: 'safeRoads', name: 'safeRoads', icon: '🛣️', regions: 80, affectedRegions: ['Moscow Oblast', 'Saint Petersburg', 'Krasnodar Krai', 'Chelyabinsk Oblast', 'Sverdlovsk Oblast'] },
@@ -515,7 +498,7 @@ Chairman of the United Russia Party
           { id: 'greenEconomy', name: 'greenEconomy', icon: '🌳', regions: 50, affectedRegions: ['Tyumen Oblast', 'Khanty-Mansi Autonomous Okrug'] },
           { id: 'historicalMemory', name: 'historicalMemory', icon: '📜', regions: 85, affectedRegions: ['Vladimir Oblast', 'Pskov Oblast', 'Smolensk Oblast', 'Novgorod Oblast'] },
           { id: 'strongFamily', name: 'strongFamily', icon: '👨‍👩‍👧‍👦', regions: 70, affectedRegions: ['Bashkortostan Republic', 'Chuvash Republic'] },
-          { id: 'cultureOfTheSmallHomeland', name: 'cultureOfTheSmallHomeland', icon: '🎨', regions: 60, affectedRegions: ['Mari El Republic', 'Mordovia Republic'] },
+          { id: 'cultureOfTheSmallHomeland', name: 'cultureOfTheSmallHomeland', icon: '�', regions: 60, affectedRegions: ['Mari El Republic', 'Mordovia Republic'] },
           { id: 'aWorldOfPossibilities', name: 'aWorldOfPossibilities', icon: '💡', regions: 55, affectedRegions: ['Saint Petersburg', 'Moscow Oblast'] },
           { id: 'myCareerWithUnitedRussia', name: 'myCareerWithUnitedRussia', icon: '💼', regions: 40, affectedRegions: ['Kirov Oblast', 'Kostroma Oblast'] },
           { id: 'newSchool', name: 'newSchool', icon: '🏫', regions: 78, affectedRegions: ['Ulyanovsk Oblast', 'Saratov Oblast'] },
@@ -770,116 +753,210 @@ Chairman of the United Russia Party
           </div>
         );
 
-        // New Party Charter Page Component
+        // Party Charter Page Component
         const PartyCharterPage = ({ t }) => {
-          const sections = t.partyCharterContent.split(/(?=^ARTICLE [IVXLCDM]+:)/gm).filter(Boolean); // Split by ARTICLE headings
-          const preamble = sections.shift(); // Extract preamble
+            // State to keep track of the currently viewed section index
+            const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+            // useRef to store references to each section's DOM element for scrolling
+            const sectionRefs = useRef({});
 
-          // Function to render a section with a heading and content
-          const renderSection = (sectionText) => {
-            const lines = sectionText.split('\n').filter(line => line.trim() !== '');
-            const titleLine = lines.shift(); // First non-empty line is the title
-
-            if (!titleLine) return null;
-
-            // Check if it's a "Table of Contents" or a regular ARTICLE
-            if (titleLine.includes("Table of Contents")) {
-              return (
-                <div key={titleLine} className="mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{titleLine.trim()}</h2>
-                  <ul className="list-disc list-inside text-lg text-gray-700 ml-4">
-                    {lines.map((line, idx) => (
-                      <li key={idx} className="mb-1">{line.trim()}</li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            } else if (titleLine.includes("Preamble")) {
-              return (
-                <div key={titleLine} className="mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{titleLine.trim()}</h2>
-                  {lines.map((line, idx) => (
-                        <p key={idx} className="text-lg text-gray-700 leading-relaxed mb-4">{line.trim()}</p>
-                      ))}
-                </div>
-              );
-            } else {
-              // For ARTICLE sections, parse sections and sub-sections
-              const articleTitleMatch = titleLine.match(/^(ARTICLE [IVXLCDM]+:.*)/);
-              const articleTitle = articleTitleMatch ? articleTitleMatch[1].trim() : titleLine.trim();
-
-              let currentSection = [];
-              let currentSectionTitle = '';
-              const parsedContent = [];
-
-              lines.forEach(line => {
-                const sectionMatch = line.match(/^(Section \d+\..*)/);
-                if (sectionMatch) {
-                  if (currentSectionTitle) {
-                    parsedContent.push({ title: currentSectionTitle, content: currentSection.join('\n').trim() });
-                  }
-                  currentSectionTitle = sectionMatch[1].trim();
-                  currentSection = [];
+            // Flatten the nested partyCharterContent into a single array of all navigable sections
+            const allSections = [];
+            Object.keys(partyCharterContent).forEach(key => {
+                const chapter = partyCharterContent[key];
+                if (chapter.sections) {
+                    // If a chapter has sections, add each section individually
+                    chapter.sections.forEach(section => allSections.push({ ...section, chapterTitle: chapter.title, id: section.id }));
                 } else {
-                  currentSection.push(line);
+                    // If it's a standalone chapter (like Preamble or Signature), add it directly
+                    allSections.push({ id: key, title: chapter.title, text: chapter.text, chapterTitle: chapter.title });
                 }
-              });
-              if (currentSectionTitle) {
-                parsedContent.push({ title: currentSectionTitle, content: currentSection.join('\n').trim() });
-              }
+            });
 
-              return (
-                <div key={articleTitle} className="mb-12">
-                  <h2 className="text-3xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">{articleTitle}</h2>
-                  {parsedContent.map((item, idx) => (
-                    <div key={idx} className="mb-6">
-                      <h3 className="text-2xl font-semibold text-gray-800 mb-3">{item.title}</h3>
-                      {item.content.split('\n').map((para, pIdx) => (
-                            <p key={pIdx} className="text-lg text-gray-700 leading-relaxed mb-2">{para.trim()}</p>
-                      ))}
+            // Function to scroll to a specific section by its ID
+            const navigateToSection = (id) => {
+                const sectionElement = sectionRefs.current[id];
+                if (sectionElement) {
+                    // Scroll into view with smooth behavior and align to the start of the element
+                    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Update the current section index to reflect the new position
+                    const newIndex = allSections.findIndex(sec => sec.id === id);
+                    if (newIndex !== -1) {
+                        setCurrentSectionIndex(newIndex);
+                    }
+                }
+            };
+
+            // Function to navigate to the previous section
+            const navigatePrevious = () => {
+                if (currentSectionIndex > 0) {
+                    const prevSectionId = allSections[currentSectionIndex - 1].id;
+                    navigateToSection(prevSectionId);
+                }
+            };
+
+            // Function to navigate to the next section
+            const navigateNext = () => {
+                if (currentSectionIndex < allSections.length - 1) {
+                    const nextSectionId = allSections[currentSectionIndex + 1].id;
+                    navigateToSection(nextSectionId);
+                }
+            };
+
+            // Effect hook to observe section visibility and update currentSectionIndex
+            useEffect(() => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            // If a section is intersecting (visible)
+                            if (entry.isIntersecting) {
+                                const sectionId = entry.target.id;
+                                const newIndex = allSections.findIndex(sec => sec.id === sectionId);
+                                // Update index only if it's a valid section and different from current
+                                if (newIndex !== -1 && newIndex !== currentSectionIndex) {
+                                    setCurrentSectionIndex(newIndex);
+                                }
+                            }
+                        });
+                    },
+                    { threshold: 0.5 } // Trigger when at least 50% of the section is visible
+                );
+
+                // Observe all section elements
+                Object.values(sectionRefs.current).forEach(section => {
+                    if (section) {
+                        observer.observe(section);
+                    }
+                });
+
+                // Cleanup function to unobserve elements when component unmounts
+                return () => {
+                    Object.values(sectionRefs.current).forEach(section => {
+                        if (section) {
+                            observer.unobserve(section);
+                        }
+                    });
+                };
+            }, [allSections, currentSectionIndex]); // Re-run effect if allSections or currentSectionIndex changes
+
+            return (
+                // Main container for the charter page, with padding for fixed navbar
+                <div className="pt-24 min-h-screen bg-gray-50 flex">
+                    {/* Left Navigation Menu (Fixed) */}
+                    <div className="w-1/4 bg-blue-800 text-white p-6 fixed h-full overflow-y-auto pt-24">
+                        <h2 className="text-3xl font-bold mb-6">{t.partyCharterPageTitle}</h2>
+                        <nav>
+                            <ul>
+                                {Object.keys(partyCharterContent).map((key) => {
+                                    const chapter = partyCharterContent[key];
+                                    return (
+                                        <li key={key} className="mb-4">
+                                            <a
+                                                href={`#${key}`} // Link to the chapter ID
+                                                onClick={(e) => {
+                                                    e.preventDefault(); // Prevent default anchor link behavior
+                                                    if (chapter.sections && chapter.sections.length > 0) {
+                                                        // If chapter has sections, navigate to the first section's ID
+                                                        navigateToSection(chapter.sections[0].id);
+                                                    } else {
+                                                        // Otherwise, navigate to the chapter's main ID
+                                                        navigateToSection(key);
+                                                    }
+                                                }}
+                                                className="text-xl font-semibold hover:text-blue-300 transition duration-300"
+                                            >
+                                                {chapter.title}
+                                            </a>
+                                            {/* Render sub-sections if they exist */}
+                                            {chapter.sections && (
+                                                <ul className="ml-4 mt-2 space-y-1">
+                                                    {chapter.sections.map((section) => (
+                                                        <li key={section.id}>
+                                                            <a
+                                                                href={`#${section.id}`} // Link to the section ID
+                                                                onClick={(e) => {
+                                                                    e.preventDefault();
+                                                                    navigateToSection(section.id);
+                                                                }}
+                                                                className="text-lg hover:text-blue-300 transition duration-300 block"
+                                                            >
+                                                                {section.title}
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </nav>
+                        {/* Back to Top link */}
+                        <a href="#charter-top" className="text-blue-300 hover:underline mt-8 block" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>{t.backToTop}</a>
                     </div>
-                  ))}
-                </div>
-              );
-            }
-          };
 
-          return (
-            <div className="pt-24 min-h-screen bg-gray-50">
-              <div className="container mx-auto px-4 py-8">
-                <img
-  src="/images/party charter.jpg"
-  alt="Party Charter Header"
-  className="w-full h-64 object-cover rounded-lg shadow-md mb-8"
-/>
+                    {/* Main Content Area */}
+                    <div className="w-3/4 ml-1/4 p-8"> {/* ml-1/4 pushes content right to clear fixed left menu */}
+                        <div className="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-xl" id="charter-top">
+                            <h1 className="text-5xl font-extrabold text-center text-gray-900 mb-10">{t.partyCharterPageTitle}</h1>
 
-<h1 className="text-5xl font-extrabold text-gray-900 mb-8 text-center">
-  {t.partyCharterPageTitle}
-</h1>
+                            {/* Render each chapter and its sections */}
+                            {Object.keys(partyCharterContent).map((key) => {
+                                const chapter = partyCharterContent[key];
+                                if (chapter.sections) {
+                                    return (
+                                        <div key={key} className="mb-8">
+                                            {/* Chapter Title, linked to ref for observation */}
+                                            <h2 className="text-4xl font-bold text-blue-800 mb-6" id={key} ref={el => sectionRefs.current[key] = el}>{chapter.title}</h2>
+                                            {/* Render individual sections within the chapter */}
+                                            {chapter.sections.map((section, index) => (
+                                                <div key={section.id} id={section.id} ref={el => sectionRefs.current[section.id] = el} className="mb-6 border-b pb-4 last:border-b-0">
+                                                    <h3 className="text-2xl font-semibold text-gray-800 mb-3">{section.title}</h3>
+                                                    {/* Split text by newline to render as paragraphs */}
+                                                    {section.text.split('\n').map((line, lineIndex) => (
+                                                        <p key={lineIndex} className="text-lg text-gray-700 leading-relaxed mb-2">{line}</p>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                } else {
+                                    // Render standalone chapters (like Preamble, Signature)
+                                    return (
+                                        <div key={key} id={key} ref={el => sectionRefs.current[key] = el} className="mb-8 border-b pb-4 last:border-b-0">
+                                            <h2 className="text-4xl font-bold text-blue-800 mb-6">{chapter.title}</h2>
+                                            {chapter.text.split('\n').map((line, lineIndex) => (
+                                                <p key={lineIndex} className="text-lg text-gray-700 leading-relaxed mb-2">{line}</p>
+                                            ))}
+                                        </div>
+                                    );
+                                }
+                            })}
 
-                <div className="bg-white rounded-lg shadow-md p-8">
-                  {/* Render Preamble separately for distinct styling if needed */}
-                  {preamble && (
-                    <div className="mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">Preamble</h2>
-                      {preamble.split('\n').slice(1).filter(line => line.trim() !== '').map((line, idx) => (
-                            <p key={idx} className="text-lg text-gray-700 leading-relaxed mb-4">{line.trim()}</p>
-                      ))}
+                            {/* Bottom Navigation Arrows */}
+                            <div className="flex justify-between items-center mt-10">
+                                <button
+                                    onClick={navigatePrevious}
+                                    disabled={currentSectionIndex === 0} // Disable if at the first section
+                                    className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out ${currentSectionIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                >
+                                    &larr; {t.previous}
+                                </button>
+                                <span className="text-lg text-gray-700">
+                                    {t.section} {currentSectionIndex + 1} of {allSections.length}
+                                </span>
+                                <button
+                                    onClick={navigateNext}
+                                    disabled={currentSectionIndex === allSections.length - 1} // Disable if at the last section
+                                    className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out ${currentSectionIndex === allSections.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                >
+                                    {t.next} &rarr;
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                  )}
-
-                  {sections.map(renderSection)}
-
-                  {/* Signature */}
-                  <div className="mt-12 text-right">
-                    <p className="text-lg font-semibold text-gray-800">SIGNED,</p>
-                    <p className="text-xl font-bold text-gray-900">Vladimir Putin</p>
-                    <p className="text-md text-gray-600">Chairman of the United Russia Party</p>
-                  </div>
                 </div>
-              </div>
-            </div>
-          );
+            );
         };
 
         // SidebarTabs Component
@@ -1032,77 +1109,75 @@ Chairman of the United Russia Party
 
           // D3 map rendering
           useEffect(() => {
-            const drawMap = () => {
-              const d3 = window.d3;
+            const d3 = window.d3;
 
-              // Ensure D3 and GeoJSON data are available
-              if (!d3 || !geoJsonData) {
+            // Ensure D3 and GeoJSON data are available
+            if (!d3 || !geoJsonData) {
                 console.warn("Map dependencies or GeoJSON data missing. Skipping map draw.");
                 return;
-              }
+            }
 
-              const svgContainer = d3.select(mapRef.current);
-              const svgWidth = svgContainer.node()?.clientWidth || 800;
-              const svgHeight = svgContainer.node()?.clientHeight || 600;
+            const svgContainer = d3.select(mapRef.current);
+            const svgWidth = svgContainer.node()?.clientWidth || 800;
+            const svgHeight = svgContainer.node()?.clientHeight || 600;
 
-              // Clear previous SVG to prevent duplicates on re-render
-              svgContainer.select("svg").remove();
+            // Clear previous SVG to prevent duplicates on re-render
+            svgContainer.select("svg").remove();
 
-              const svg = svgContainer.append("svg")
+            const svg = svgContainer.append("svg")
                 .attr("width", svgWidth)
                 .attr("height", svgHeight)
                 .attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`);
 
-              const projection = d3.geoMercator().fitSize([svgWidth, svgHeight], geoJsonData);
-              const path = d3.geoPath().projection(projection);
+            const projection = d3.geoMercator().fitSize([svgWidth, svgHeight], geoJsonData);
+            const path = d3.geoPath().projection(projection);
 
-              svg.append("g")
+            svg.append("g")
                 .selectAll("path")
                 .data(geoJsonData.features)
                 .join("path")
-                  .attr("d", path)
-                  .attr("fill", d => {
+                .attr("d", path)
+                .attr("fill", d => {
                     const regionName = d.properties.name; // Assuming 'name' property holds the merged region name
-                    console.log("Drawing region:", regionName); // Debugging: log region name
                     // Apply highlight if region matches the sidebar selection
                     if (highlightedRegionName && regionName === highlightedRegionName) {
                         return "#FFD700"; // Gold for highlighted region
                     }
                     // Apply project filter highlight
                     if (activeProjectFilter) {
-                      const project = projectsData.find(p => p.id === activeProjectFilter);
-                      // Check if the current map region is affected by the active project
-                      if (project && project.affectedRegions.some(affectedFederalSubject => {
+                        const project = projectsData.find(p => p.id === activeProjectFilter);
+                        // Check if the current map region is affected by the active project
+                        if (project && project.affectedRegions.some(affectedFederalSubject => {
                             // Map the federal subject from project data to its custom region
                             const customRegionOfAffectedSubject = regionMapping[affectedFederalSubject];
                             // Check if the current map region (d.properties.name) matches the custom region of the affected subject
                             return regionName === customRegionOfAffectedSubject;
-                          })) {
-                        return "#4CAF50"; // Green for regions affected by the active project
-                      }
+                        })) {
+                            return "#4CAF50"; // Green for regions affected by the active project
+                        }
                     }
                     return regionColors[regionName] || "#E0E0E0"; // Use custom region color or default light gray
-                  })
-                  .attr("stroke", "#FFFFFF") // White borders for regions
-                  .attr("stroke-width", 0.5)
-                  .on("mouseover", function(event, d) {
+                })
+                .attr("stroke", "#FFFFFF") // White borders for regions
+                .attr("stroke-width", 0.5)
+                .on("mouseover", function(event, d) {
                     const regionName = d.properties.name || 'Unknown Region';
                     setHoveredRegion(regionName);
                     d3.select(this).attr("stroke-width", 2); // Thicker border on hover
                     if (tooltipRef.current) {
-                      tooltipRef.current.style.display = "block";
-                      tooltipRef.current.style.left = `${event.pageX + 10}px`;
-                      tooltipRef.current.style.top = `${event.pageY - 20}px`;
-                      tooltipRef.current.innerText = `${t.projectsMapHover} ${regionName}`;
+                        tooltipRef.current.style.display = "block";
+                        tooltipRef.current.style.left = `${event.pageX + 10}px`;
+                        tooltipRef.current.style.top = `${event.pageY - 20}px`;
+                        tooltipRef.current.innerText = `${t.projectsMapHover} ${regionName}`;
                     }
-                  })
-                  .on("mousemove", function(event) {
+                })
+                .on("mousemove", function(event) {
                     if (tooltipRef.current) {
-                      tooltipRef.current.style.left = `${event.pageX + 10}px`;
-                      tooltipRef.current.style.top = `${event.pageY - 20}px`;
+                        tooltipRef.current.style.left = `${event.pageX + 10}px`;
+                        tooltipRef.current.style.top = `${event.pageY - 20}px`;
                     }
-                  })
-                  .on("mouseout", function(event, d) {
+                })
+                .on("mouseout", function(event, d) {
                     const regionName = d.properties.name;
                     setHoveredRegion(null);
                     d3.select(this).attr("stroke-width", 0.5); // Reset border on mouse out
@@ -1123,21 +1198,16 @@ Chairman of the United Russia Party
                         return regionColors[regionName] || "#E0E0E0";
                     });
                     if (tooltipRef.current) tooltipRef.current.style.display = "none";
-                  })
-                  .on("click", (event, d) => {
+                })
+                .on("click", (event, d) => {
                     const regionName = d.properties.name;
                     handleRegionClick(regionName);
-                  });
-            };
+                });
 
-            // Only draw map if ref is available and data is loaded
-            if (mapRef.current && geoJsonData) {
-              drawMap();
-              // Add resize listener to redraw map on window resize
-              const resizeObserver = new ResizeObserver(() => drawMap());
-              resizeObserver.observe(mapRef.current);
-              return () => resizeObserver.disconnect(); // Cleanup on unmount
-            }
+            // Add resize listener to redraw map on window resize
+            const resizeObserver = new ResizeObserver(() => drawMap());
+            resizeObserver.observe(mapRef.current);
+            return () => resizeObserver.disconnect(); // Cleanup on unmount
           }, [geoJsonData, highlightedRegionName, activeProjectFilter]); // Redraw when data or highlight/filter changes
 
 
@@ -1681,7 +1751,7 @@ Chairman of the United Russia Party
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 font-semibold text-lg flex items-center"
                 >
-                  <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-4L20 4m0 0v5m0-5H15"></path></svg>
+                  <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 0 002 2h10a2 0 002-2v-4m-4-4L20 4m0 0v5m0-5H15"></path></svg>
                 </a>
               </div>
             </div>
@@ -1782,7 +1852,7 @@ Chairman of the United Russia Party
               case 'shop':
                 return <ShopPage setCurrentPage={setCurrentPage} t={t} />;
               case 'party-charter-page': // New page route
-                return <PartyCharterPage setCurrentPage={setCurrentPage} t={t} />;
+                return <PartyCharterPage t={t} />; // No setCurrentPage needed here as it's a self-contained page
               case 'leadership-page':
                 return <LeadershipPage setCurrentPage={setCurrentPage} t={t} />;
               case 'leadership-detail-page': // New page for leadership hierarchy
@@ -2079,3 +2149,4 @@ Chairman of the United Russia Party
     </script>
 </body>
 </html>
+�
