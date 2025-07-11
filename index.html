@@ -1163,14 +1163,22 @@ Chairman of the United Russia Party
             <div className="pt-24 min-h-screen bg-gray-50">
               {/* Page Header Image */}
               <section
-                className="relative bg-cover bg-center h-64 flex items-center justify-center"
-                style={{
-                  backgroundImage: `url('https://placehold.co/1200x256/333333/FFFFFF?text=Party+Projects+Banner')`, // Placeholder image
-                  backgroundAttachment: 'fixed',
-                }}
-              >
-                <div className="absolute inset-0 bg-black opacity-30"></div>
-              </section>
+  className="relative bg-cover bg-center h-96 flex items-center justify-center text-center"
+  style={{
+    backgroundImage: `url('/images/issues page main banner.jpg')`,
+    backgroundAttachment: 'fixed',
+  }}
+>
+  <div className="absolute inset-0 bg-black opacity-40"></div>
+  <div className="relative z-10 px-4 max-w-4xl">
+    <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+      {t.theIssuesPageTitle}
+    </h1>
+    <p className="text-lg md:text-xl text-gray-100">
+      {t.theIssuesPageDescription}
+    </p>
+  </div>
+</section>
 
               <div className="container mx-auto px-4 py-8">
                 {/* Top Section: Title, Description, and Carousel */}
