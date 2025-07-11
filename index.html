@@ -1401,25 +1401,20 @@ Chairman of the United Russia Party
           return (
             <div className="pt-24 min-h-screen bg-gray-50">
               {/* Page Header Image */}
-            <section
-  className="relative bg-cover bg-center h-64 flex items-center justify-center text-center"
+<section
+  className="relative bg-cover bg-center h-64 flex items-center justify-center"
   style={{
-    backgroundImage: `url('/images/issues page main banner.jpg')`,
+    backgroundImage: `url('/images/issues page.jpg')`,
     backgroundAttachment: 'fixed',
   }}
 >
   <div className="absolute inset-0 bg-black opacity-40"></div>
-  
-  <div className="relative z-10 px-4">
-    <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-      {t.theIssuesPageTitle}
-    </h1>
-    <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
-      {t.theIssuesPageDescription}
-    </p>
-  </div>
-</section>
 
+  <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold text-white text-center">
+    The Issues
+  </h1>
+</section>
+    
                 <div className="max-w-3xl mx-auto">
                   {issues.map((issue, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
