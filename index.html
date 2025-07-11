@@ -1399,43 +1399,42 @@ Chairman of the United Russia Party
           ];
 
           return (
-            <div className="pt-24 min-h-screen bg-gray-50">
-              {/* Page Header Image */}
-<section
-  className="relative bg-cover bg-center h-64 flex items-center justify-center"
-  style={{
-    backgroundImage: `url('/images/issues page main banner.jpg')`,
-    backgroundAttachment: 'fixed',
-  }}
->
-  <div className="absolute inset-0 bg-black opacity-40"></div>
+  <div className="pt-24 min-h-screen bg-gray-50">
+    {/* Page Header Image */}
+    <section
+      className="relative bg-cover bg-center h-64 flex items-center justify-center"
+      style={{
+        backgroundImage: `url('/images/issues page main banner.jpg')`,
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold text-white text-center">
+        The Issues
+      </h1>
+    </section>
 
-  <h1 className="relative z-10 text-4xl md:text-5xl font-extrabold text-white text-center">
-    The Issues
-  </h1>
-</section>
-
-<div className="max-w-3xl mx-auto">
-  {issues.map((issue, index) => (
-    <div key={index} className="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
-      <button
-        className="w-full flex justify-between items-center p-6 text-left font-bold text-lg text-gray-900 hover:bg-gray-100 transition duration-200 focus:outline-none"
-        onClick={() => toggleIssue(issue.name)}
-      >
-        {issue.name}
-        <span className="text-blue-600 text-2xl">
-          {openIssue === issue.name ? '-' : '+'}
-        </span>
-      </button>
-      {openIssue === issue.name && (
-        <div className="p-6 pt-0 text-left text-gray-700">
-          <p className="mb-4">{issue.description}</p>
+    <div className="max-w-3xl mx-auto px-4 py-8">
+      {issues.map((issue, index) => (
+        <div key={index} className="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+          <button
+            className="w-full flex justify-between items-center p-6 text-left font-bold text-lg text-gray-900 hover:bg-gray-100 transition duration-200 focus:outline-none"
+            onClick={() => toggleIssue(issue.name)}
+          >
+            {issue.name}
+            <span className="text-blue-600 text-2xl">
+              {openIssue === issue.name ? '-' : '+'}
+            </span>
+          </button>
+          {openIssue === issue.name && (
+            <div className="p-6 pt-0 text-left text-gray-700">
+              <p className="mb-4">{issue.description}</p>
+            </div>
+          )}
         </div>
-      )}
+      ))}
     </div>
-  ))}
-</div> {/* closes max-w-3xl wrapper */}
-</div> {/* closes pt-24 main wrapper */}
+  </div>
 );
 
         const ContactPage = ({ t }) => (
