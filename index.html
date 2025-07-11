@@ -661,14 +661,37 @@ Chairman of the United Russia Party
           </button>
         );
 
-        // Hero Section Component (now just an image banner)
-const HeroSection = () => {
+        const HeroSection = ({ t }) => {
   return (
     <section
-      className="relative bg-cover bg-center h-[500px] flex items-center justify-center"
+      className="relative h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url(/images/kremlin-main.jpg)`, // ✅ Correct local path
+        backgroundImage: `url(/images/home-banner.jpg)`,
         backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Text and button */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          {t.heroTitle}
+        </h1>
+        <p className="text-lg md:text-2xl max-w-3xl mb-8">
+          {t.heroDescription}
+        </p>
+        <a
+          href={t.runForOfficeLink}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-200"
+        >
+          {t.runForOffice} &raquo;
+        </a>
+      </div>
+    </section>
+  );
+};
+
       }}
     >
       {/* Optional: add content here if needed */}
