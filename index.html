@@ -1162,24 +1162,22 @@ Chairman of the United Russia Party
           return (
             <div className="pt-24 min-h-screen bg-gray-50">
               {/* Page Header Image */}
-              <section
-  className="relative bg-cover bg-center h-96 flex items-center justify-center text-center"
+             <section
+  className="relative bg-cover bg-center h-96 flex flex-col items-center justify-center text-center px-4"
   style={{
     backgroundImage: `url('/images/issues page main banner.jpg')`,
     backgroundAttachment: 'fixed',
   }}
 >
-  <div className="absolute inset-0 bg-black opacity-40"></div>
-  <div className="relative z-10 px-4 max-w-4xl">
-    <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-      {t.theIssuesPageTitle}
-    </h1>
-    <p className="text-lg md:text-xl text-gray-100">
-      {t.theIssuesPageDescription}
-    </p>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+
+  {/* Text content */}
+  <div className="relative z-10 text-white max-w-3xl">
+    <h1 className="text-4xl md:text-5xl font-extrabold mb-4">{t.theIssuesPageTitle}</h1>
+    <p className="text-lg md:text-xl leading-relaxed">{t.theIssuesPageDescription}</p>
   </div>
 </section>
-
               <div className="container mx-auto px-4 py-8">
                 {/* Top Section: Title, Description, and Carousel */}
                 <div className="flex flex-col md:flex-row items-center justify-between mb-12">
@@ -1410,21 +1408,21 @@ Chairman of the United Russia Party
             <div className="pt-24 min-h-screen bg-gray-50">
               {/* Page Header Image */}
               <section
-                className="relative bg-cover bg-center h-64 flex items-center justify-center"
-                style={{
-                  backgroundImage: `url('/images/issues page main banner.jpg')`, // Placeholder image for The Issues page
-                  backgroundAttachment: 'fixed',
-                }}
-              >
-                <div className="absolute inset-0 bg-black opacity-30"></div>
-              </section>
+  className="relative bg-cover bg-center h-96 flex flex-col items-center justify-center text-center px-4"
+  style={{
+    backgroundImage: `url('/images/issues page main banner.jpg')`,
+    backgroundAttachment: 'fixed',
+  }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black opacity-50"></div>
 
-              <div className="container mx-auto px-4 py-8 text-center">
-                <h1 className="text-5xl font-extrabold text-gray-900 mb-6">{t.theIssuesPageTitle}</h1>
-                <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12">
-                  {t.theIssuesPageDescription}
-                </p>
-
+  {/* Text content */}
+  <div className="relative z-10 text-white max-w-3xl">
+    <h1 className="text-4xl md:text-5xl font-extrabold mb-4">{t.theIssuesPageTitle}</h1>
+    <p className="text-lg md:text-xl leading-relaxed">{t.theIssuesPageDescription}</p>
+  </div>
+</section>
                 <div className="max-w-3xl mx-auto">
                   {issues.map((issue, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md mb-4 overflow-hidden">
