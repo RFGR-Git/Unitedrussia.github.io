@@ -1699,9 +1699,12 @@ Chairman of the United Russia Party
                   onClick={() => setCurrentPage('home')}
                   className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1 -ml-1"
                 >
-                  <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    UR
-                  </div>
+                  <img
+  src="/favicon.png"
+  alt="United Russia Logo"
+  className="w-10 h-10 rounded-full object-cover"
+/>
+<span className="text-xl font-semibold text-gray-900">{t.partyName}</span>
                   <span className="text-xl font-semibold text-gray-900">{t.partyName}</span>
                 </button>
 
