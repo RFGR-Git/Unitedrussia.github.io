@@ -2323,31 +2323,35 @@ Use media responsibly to foster national values and transparency.`
         );
 
         // New ActionBlock component to match the screenshot's design
-        const ActionBlock = ({ icon, title, description, buttons }) => (
-          <div className="flex items-start md:items-center flex-col md:flex-row bg-[#FFFFFF] p-6 rounded-lg shadow-md mb-8 max-w-4xl mx-auto border border-gray-200">
-            <div className="flex-shrink-0 w-20 h-20 bg-[#003399] rounded-full flex items-center justify-center text-white text-4xl mb-4 md:mb-0 md:mr-6">
-              <img src={icon} alt="Action Icon" className="w-12 h-12" /> {/* Placeholder image for icons */}
-            </div>
-            <div className="flex-grow text-left">
-              <h3 className="2xl font-oswald font-bold text-[#3C3C3B] mb-2">{title}</h3>
-              <p className="text-[#3C3C3B] font-inter mb-4">{description}</p>
-              <div className="flex flex-wrap gap-3">
-                {buttons.map((button, index) => (
-                  <a
-                    key={index}
-                    href={button.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#FFFFFF] border-2 border-[#003399] text-[#003399] hover:bg-[#003399] hover:text-white font-bold py-2 px-6 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:scale-105"
-                  >
-                    {button.text} <span className="ml-1">&raquo;</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
+const ActionBlock = ({ icon, title, description, buttons }) => (
+  <div className="flex items-start md:items-center flex-col md:flex-row bg-[#FFFFFF] p-6 rounded-lg shadow-md mb-8 max-w-4xl mx-auto border border-gray-200">
+    
+    {/* Circle icon container with image inside */}
+    <div className="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden mb-4 md:mb-0 md:mr-6">
+      <img src={icon} alt="Action Icon" className="w-full h-full object-cover" />
+    </div>
 
+    {/* Text and button section */}
+    <div className="flex-grow text-left">
+      <h3 className="2xl font-oswald font-bold text-[#3C3C3B] mb-2">{title}</h3>
+      <p className="text-[#3C3C3B] font-inter mb-4">{description}</p>
+      <div className="flex flex-wrap gap-3">
+        {buttons.map((button, index) => (
+          <a
+            key={index}
+            href={button.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#FFFFFF] border-2 border-[#003399] text-[#003399] hover:bg-[#003399] hover:text-white font-bold py-2 px-6 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            {button.text} <span className="ml-1">&raquo;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </div>
+);
         const TakeActionPage = ({ setCurrentPage, t }) => (
           <div className="pt-24 min-h-screen bg-[#FFFFFF]">
             <section
